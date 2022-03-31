@@ -1,2 +1,2 @@
 # need-to-learn
-Sieve of Eratosthenes
+Sieve of Eratosthenes prime algorithms
