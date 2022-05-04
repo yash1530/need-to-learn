@@ -37,3 +37,51 @@ int main()
     cin>>n>>m;
     cout<<seive(n,m);
 }
+    ******************************************************************************************
+    #include <bits/stdc++.h>
+using namespace std;
+
+bool isPrime(int n)
+    {
+        if(n==0|| n==1)
+         return false;
+         for(int i=2;i*i<=n;i++)
+         {
+             if(n%i==0)
+             return false;
+         }
+         return true;
+    }
+vector<int>primeProduct(long long L, long long R){
+        // code here
+       // long long int ans=1;
+        long long int mod=1000000007;
+        vector<int>v;
+        for(auto i=L;i<=R;i++)
+        {
+            if(isPrime(i))
+            {
+                v.push_back(i);
+                
+            }
+            //ans=(ans*i)%mod;*/
+            
+        }
+        return v;
+    }
+int main()
+{ 
+    long long int L,R;
+    cin>>L>>R;
+    vector<int>v=primeProduct(L,R);
+    for(auto it:v)
+    {
+        cout<<it<<" ";
+    }
+    
+}
+        
+	
+
+
+
